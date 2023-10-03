@@ -1,0 +1,9 @@
+<h1>All Courses </h1>
+
+<%@courses.each do |course|%>
+  <p><%= course.name%>: <%=course.residents.count%></p>
+  <% course.residents.alph_order.each do |resident|%> 
+    <p><%=resident.name%></p>
+    <%end%>
+  <br>
+<%end%>
